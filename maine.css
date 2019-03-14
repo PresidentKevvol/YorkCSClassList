@@ -1,0 +1,138 @@
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
+.titl
+{
+    padding-top: 0;
+    margin-top: 0.7rem;
+    font-size: 1.9em;
+    font-family: sans-serif;
+    position: absolute;
+    font-weight: normal;
+    left: 8rem;
+}
+
+.smol
+{
+    font-size: 0.45em;
+}
+
+.svgConns
+{
+    position: absolute;
+}
+
+.classBox
+{
+    width: 12em;
+    height: 4em;
+    font-family: sans-serif;
+    text-align: center;
+    border-radius: 12px;
+    position: absolute;
+}
+
+.eecs
+{
+    border-style: solid;
+    border-color: #c675ff;
+    border-width: 2px;
+    background-color: #e7c4ff;
+}
+
+.math
+{
+    border-style: solid;
+    border-color: #23c4ff;
+    border-width: 2px;
+    background-color: #b2f2ff;
+}
+
+#eecs1001
+{
+    left: 16em;
+    top: 4em;
+}
+
+#eecs1012
+{
+    left: 2em;
+    top: 4em;
+}
+
+#eecs1022
+{
+    left: 2em;
+    top: 10em;
+}
+
+
+#math1300
+{
+    left: 58em;
+    top: 4em;
+}
+
+#math1310
+{
+    left: 58em;
+    top: 10em;
+}
+
+#math1019
+{
+    left: 30em;
+    top: 4em;
+}
+
+#math1025
+{
+    left: 72em;
+    top: 4em;
+}
+
+
+#eecs2031
+{
+    left: 2em;
+    top: 16em;
+}
+
+#eecs2021
+{
+    left: 16em;
+    top: 16em;
+}
+
+#eecs2030
+{
+    left: 30em;
+    top: 16em;
+}
+
+#eecs2001
+{
+    left: 44em;
+    top: 16em;
+}
+
+#eecs2011
+{
+    left: 30em;
+    top: 22em;
+}
+
+#math2015
+{
+    left: 58em;
+    top: 16em;
+}
+
+#math2271
+{
+    left: 72em;
+    top: 22em;
+}
