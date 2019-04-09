@@ -2,32 +2,53 @@
     <head>
         <title>York University CS classes</title>
         <link rel="stylesheet" href="maine.css">
+        <script src="maine.js"></script>
     </head>
     <body>
         <h1 class="titl">York University Computer Science Course prerequesit list <span class="smol">(under construction)</span></h1>
         
-        <svg height="30em" width="84em" class="svgConns">
+        <div id="root">
+        <svg height="42em" width="84em" class="svgConns">
             <defs>
                 <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" markerUnits="strokeWidth" orient="auto">
                     <path d="M0,0 L0,6 L9,3 z" fill="#000" />
                 </marker>
             </defs>
             
-            <line x1="64em" y1="8em" x2="64em" y2="10em" style="stroke:rgb(0,0,0);stroke-width:1;" marker-end="url(#arrow)"/>
-            <line x1="8em" y1="8em" x2="8em" y2="10em" style="stroke:rgb(0,0,0);stroke-width:1;" marker-end="url(#arrow)"/>
+            <line x1="64em" y1="8em" x2="64em" y2="10em" style="stroke:rgb(0,0,0);stroke-width:1;" marker-end="url(#arrow)" class="math1300 math1310"/>
+            <line x1="8em" y1="8em" x2="8em" y2="10em" style="stroke:rgb(0,0,0);stroke-width:1;" marker-end="url(#arrow)" class="eecs1012 eecs1022"/>
             
-            <line x1="8em" y1="14em" x2="8em" y2="16em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)"/>
+            <line x1="8em" y1="14em" x2="8em" y2="16em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs1022 eecs2031"/>
             
-            <line x1="14em" y1="12em" x2="22em" y2="16em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)"/>
-            <line x1="14em" y1="12em" x2="36em" y2="16em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)"/>
-            <line x1="14em" y1="12em" x2="50em" y2="16em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)"/>
-            <line x1="36em" y1="20em" x2="36em" y2="22em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)"/>
+            <line x1="14em" y1="12em" x2="22em" y2="16em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs1022 eecs2021"/>
+            <line x1="14em" y1="12em" x2="36em" y2="16em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs1022 eecs2030"/>
+            <line x1="14em" y1="12em" x2="50em" y2="16em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs1022 eecs2001"/>
+            <line x1="36em" y1="20em" x2="36em" y2="22em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs2030 eecs2011"/>
             
-            <line x1="38em" y1="8em" x2="38em" y2="22em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)"/>
+            <line x1="38em" y1="8em" x2="38em" y2="22em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="math1019 eecs2011"/>
             
-            <line x1="64em" y1="14em" x2="64em" y2="16em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)"/>
-            <line x1="70em" y1="18em" x2="78em" y2="22em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)"/>
-            <line x1="80em" y1="6em" x2="80em" y2="22em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)"/>
+            <line x1="64em" y1="14em" x2="64em" y2="16em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="math1310 math2015"/>
+            <line x1="70em" y1="18em" x2="78em" y2="22em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="math2015 math2271"/>
+            <line x1="80em" y1="6em" x2="80em" y2="22em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="math1025 math2271"/>
+            
+            <line x1="38em" y1="8em" x2="50em" y2="22em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="math1019 math1090"/>
+            
+            <line x1="36em" y1="20em" x2="8em" y2="28em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs2030 eecs3000"/>
+            
+            <line x1="36em" y1="20em" x2="22em" y2="28em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs2030 eecs3101"/>
+            <line x1="36em" y1="26em" x2="22em" y2="28em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs2011 eecs3101"/>
+            <line x1="64em" y1="14em" x2="22em" y2="28em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="math1310 eecs3101"/>
+            
+            <line x1="36em" y1="20em" x2="38em" y2="28em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs2030 eecs3311"/>
+            <line x1="36em" y1="26em" x2="38em" y2="28em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs2011 eecs3311"/>
+            <line x1="50em" y1="26em" x2="38em" y2="28em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="math1090 eecs3311"/>
+            
+            <line x1="36em" y1="20em" x2="8em" y2="34em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs2030 eecs3215"/>
+            <line x1="8em" y1="20em" x2="8em" y2="34em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs2031 eecs3215"/>
+            
+            <line x1="36em" y1="20em" x2="22em" y2="34em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs2030 eecs3221"/>
+            <line x1="8em" y1="20em" x2="22em" y2="34em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs2031 eecs3221"/>
+            <line x1="22em" y1="20em" x2="22em" y2="34em" style="stroke:rgb(0,0,0);stroke-width:1" marker-end="url(#arrow)" class="eecs2021 eecs3221"/>
         </svg>
         
         <!-- first year courses -->
@@ -83,6 +104,11 @@
             Software Tools
         </div>
         
+        <div class="classBox math" id="math1090">
+            MATH 1090 (3.00)<br>
+            Introduction to Logic for Computer Science
+            <!-- math 1019 -->
+        </div>
         <div class="classBox math" id="math2015">
             MATH 2015 (3.00)<br>
             Applied Multivariate and Vector Calculus
@@ -90,6 +116,35 @@
         <div class="classBox math" id="math2271">
             MATH 2271 (3.00)<br>
             Differential Equations for Scientists and Engineers
+        </div>
+        
+        <!-- third year courses -->
+        <div class="classBox eecs" id="eecs3000">
+            EECS 3000 (3.00)<br>
+            Professional Practice in Computing
+            <!-- prereq: eecs 2030 -->
+        </div>
+        <div class="classBox eecs" id="eecs3101">
+            EECS 3101 (3.00)<br>
+            Design and Analysis of Algorithms
+            <!-- prereq: eecs 2030, 2011, math 1310 -->
+        </div>
+        <div class="classBox eecs" id="eecs3311">
+            EECS 3311 (3.00)<br>
+            Software Design
+            <!-- prereq: eecs 2030, 2011, math 1090 -->
+        </div>
+        <div class="classBox eecs" id="eecs3215">
+            EECS 3215 (4.00)<br>
+            Embedded Systems
+            <!-- prereq: eecs 2030, 2031, 3201 -->
+        </div>
+        <div class="classBox eecs" id="eecs3221">
+            EECS 3221 (3.00)<br>
+            Operating System Fundamentals
+            <!-- prereq: eecs 2030, 2021, 2031 -->
+        </div>
+            
         </div>
     </body>
 </html>

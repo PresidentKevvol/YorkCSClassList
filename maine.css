@@ -15,6 +15,13 @@ body
     left: 8rem;
 }
 
+#root
+{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
 .smol
 {
     font-size: 0.45em;
@@ -125,6 +132,12 @@ body
     top: 22em;
 }
 
+#math1090
+{
+    left: 44em;
+    top: 22em;
+}
+
 #math2015
 {
     left: 58em;
@@ -135,4 +148,35 @@ body
 {
     left: 72em;
     top: 22em;
+}
+
+
+#eecs3000
+{
+    left: 2em;
+    top: 28em;
+}
+
+#eecs3101
+{
+    left: 16em;
+    top: 28em;
+}
+
+#eecs3311
+{
+    left: 30em;
+    top: 28em;
+}
+
+#eecs3215
+{
+    left: 2em;
+    top: 34em;
+}
+
+#eecs3221
+{
+    left: 16em;
+    top: 34em;
 }
