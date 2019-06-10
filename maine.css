@@ -27,6 +27,15 @@ body
     font-size: 0.45em;
 }
 
+.madeby
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+}
+
 .svgConns
 {
     position: absolute;
@@ -147,6 +156,12 @@ body
 #math2271
 {
     left: 72em;
+    top: 22em;
+}
+
+#math2030
+{
+    left: 58em;
     top: 22em;
 }
 
