@@ -44,7 +44,7 @@ body
 .classBox
 {
     width: 12em;
-    height: 4em;
+    height: 4.5em;
     font-family: sans-serif;
     text-align: center;
     border-radius: 12px;
@@ -67,8 +67,7 @@ body
     background-color: #b2f2ff;
 }
 
-#eecs1001
-{
+#eecs1001{
     left: 16em;
     top: 4em;
 }
@@ -194,4 +193,124 @@ body
 {
     left: 16em;
     top: 34em;
+}
+
+#eecs3401
+{
+    left: 30em;
+    top: 34em;
+}
+
+#eecs3421
+{
+    left: 44em;
+    top: 34em;
+}
+
+#eecs3431
+{
+    left: 58em;
+    top: 34em;
+}
+
+#eecs3461
+{
+    left: 72em;
+    top: 34em;
+}
+
+#eecs4101
+{
+    left: 2em;
+    top: 40em;
+}
+
+#eecs4115
+{
+    left: 16em;
+    top: 40em;
+}
+
+#eecs4141
+{
+    left: 30em;
+    top: 40em;
+}
+
+#eecs4161
+{
+    left: 44em;
+    top: 40em;
+}
+
+#eecs4201
+{
+    left: 58em;
+    top: 40em;
+}
+
+#eecs4215
+{
+    left: 2em;
+    top: 46em;
+}
+
+#eecs4401
+{
+    left: 16em;
+    top: 46em;
+}
+
+#eecs4404
+{
+    left: 30em;
+    top: 46em;
+}
+
+#eecs4412
+{
+    left: 44em;
+    top: 46em;
+}
+
+#eecs4413
+{
+    left: 58em;
+    top: 46em;
+}
+
+#eecs4414
+{
+    left: 2em;
+    top: 52em;
+}
+
+#eecs4415
+{
+    left: 16em;
+    top: 52em;
+}
+
+#eecs4422
+{
+    left: 30em;
+    top: 52em;
+}
+
+#eecs4441
+{
+    left: 44em;
+    top: 52em;
+}
+
+#eecs4443
+{
+    left: 58em;
+    top: 52em;
+}
+
+#eecs4471
+{
+    left: 72em;
+    top: 52em;
 }
