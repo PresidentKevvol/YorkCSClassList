@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>York University CS classes</title>
+        <link rel="stylesheet" href="maine.css">
+        <script src="maine.js"></script>
+    </head>
+    <body>
+        <h1 class="titl">York University Computer Science Skill Tree (Course prerequisite list) <span class="smol">(under construction)</span></h1>
+
+        <div hidden="hidden" id="templates">
+            <line x1="" y1="" x2="" y2="" style="stroke:rgb(0,0,0);stroke-width:1;" marker-end="url(#arrow)" class="svg-arrow"/>
+        </div>
+
+        <div id="root" style="width: {{- root_div_base_width -}}; height: {{- root_div_base_height -}};">
+            <svg height="100%" width="100%" class="svgConns">
+                <defs>
+                    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" markerUnits="strokeWidth" orient="auto">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#000" />
+                    </marker>
+                </defs>
+            </svg>
+
+            <!-- the courses div box goes here -->
+            {{- courses_divs -}}
+
+        </div>
+
+        <!-- the explaination box -->
+        <div id="explain">
+            <div id="explain-main" style="display: none;">
+                <div id="explain-topp">
+                    EECS 2011 (3.00)<br>
+                      Fundamentals of Data Structures
+                </div>
+                <div id="explain-desc">
+                </div>
+                <div id="explain-prereq-list-div">
+                    Prerequsites:
+                    <ul id="explain-prereq-list">
+                    </ul>
+                </div>
+            </div>
+            <div id="explain-hint">Click on a course to see its description here</div>
+        </div>
+
+        <div class="madeby">Made by PresidentKevvol (2019-2021)</div>
+    </body>
+</html>

@@ -5,13 +5,16 @@ function setup()
 {
     //all the class boxes
     var allBoxes = document.getElementsByClassName("classBox");
+    rootDiv = document.getElementById("root");
+
     for(var ct=0; ct<allBoxes.length; ct++)
     {
         allBoxes[ct].addEventListener("mouseover", boxOnHover);
         allBoxes[ct].addEventListener("mouseout", boxOnLeave);
+        allBoxes[ct].addEventListener("click", boxOnClick);
     }
-    
-    rootDiv = document.getElementById("root");
+    rootDiv.addEventListener("click", rootDivClicked);
+
     setupArrows();
 }
 
@@ -20,7 +23,7 @@ function setupArrows()
 {
     var classBoxes = document.getElementsByClassName("classBox");
     var arrow_template = document.getElementById("templates").getElementsByClassName("svg-arrow")[0];
-    
+
     for(var i = 0; i<classBoxes.length; i++){
         var boxx = classBoxes[i];
         var preq = boxx.getAttribute("prereq");
@@ -61,64 +64,72 @@ function setupArrows()
 //called when a box have the cursor hovered on
 function boxOnHover(event)
 {
+    //if a specific box is under focus, then don't change anything
+    if (box_focused != false) {
+       return;
+    }
     //the element that fired the event
     var source = event.target || event.srcElement;
+    highlightCourse(source);
+}
+
+//function for highlighting a course and it's immediate dependencies and dependents
+function highlightCourse(source) {
+    //loop selecting a box's parent until reaching the box itself
+    //(instead of the divs inside it)
+    while (!source.classList.contains("classBox")) {
+        source = source.parentElement;
+    }
+    
     //the id of element
     var sourceId = source.id;
-    
+
     //hide all elements first
-    var allElements = rootDiv.getElementsByTagName("div");
+    var allElements = rootDiv.getElementsByClassName("classBox");
     for(var ct=0; ct<allElements.length; ct++)
     {
         allElements[ct].style.opacity = "0.3";
     }
-    
+
     source.style.opacity = "1.0";
-    
+
     //these are the arrows need to appear
     var arrows = document.getElementsByClassName(sourceId);
-    console.log(arrows.length);
-    for(var ct=0; ct<arrows.length; ct++)
-    {
+    //console.log(arrows.length);
+    for(var ct=0; ct<arrows.length; ct++) {
         //arrows[ct].style.opacity = "1.0";
         //all the classes of the arrows are related boxes
         var related = arrows[ct].classList;
-        for(var ctt=0; ctt<related.length; ctt++)
-        {
-            if (document.getElementById(related[ctt])){
+        for(var ctt=0; ctt<related.length; ctt++) {
+            if (document.getElementById(related[ctt])) {
                 document.getElementById(related[ctt]).style.opacity = "1.0";
             }
         }
     }
-    
     //these are all the arrows
     var allArrows = rootDiv.getElementsByTagName("line");
-    for(var ct=0; ct<allArrows.length; ct++)
-    {
-        /*
-        //if this arrow is a related arrow
-        if(arrows.includes(allArrows[ct]))
-        {
-            allArrows[ct].style.opacity = "1.0";
-        }
-        else
-        {
-            allArrows[ct].style.opacity = "0.4";
-        }
-        */
+    for(var ct=0; ct<allArrows.length; ct++) {
         //hide all arrows first
         allArrows[ct].style.opacity = "0.08";
     }
-    
-    for(var ct=0; ct<arrows.length; ct++)
-    {
-        console.log("one arrow");
+    //show all arrows that needed to be shown
+    for(var ct=0; ct<arrows.length; ct++) {
+        //console.log("one arrow");
         arrows[ct].style.opacity = "1.0";
     }
 }
 
 function boxOnLeave()
 {
+    //if a specific box is under focus, then don't change anything
+    if (box_focused != false) {
+       return;
+    }
+    //otherwise show all elements again
+    showAllElements();
+}
+
+function showAllElements() {
     //show all elements again
     var allElements = rootDiv.getElementsByTagName("*");
     for(var ct=0; ct<allElements.length; ct++)
@@ -127,4 +138,75 @@ function boxOnLeave()
     }
 }
 
+//record the box currently focused
+var box_focused = false;
+
+//when a box is clicked, highlight it and disable hover highlight
+function boxOnClick(event) {
+    //get the element that fired the event
+    var source = event.target || event.srcElement;
+    focusBox(source);
+}
+
+//focus a box when it is clicked, disabling hovering and showing description
+function focusBox(source) {
+    //loop selecting a box's parent until reaching the box itself
+    //(instead of the divs inside it)
+    while (!source.classList.contains("classBox")) {
+        source = source.parentElement;
+    }
+    
+    //record the highlighted box
+    box_focused = source.id;
+    //highlight the course
+    highlightCourse(source);
+
+    //show the description div
+    document.getElementById("explain-main").style.display = "block";
+    document.getElementById("explain-hint").style.display = "none";
+
+    //the title (full code and name)
+    var course_code_full = source.getElementsByClassName("course-code-full")[0].innerHTML; 
+    var course_name = source.getElementsByClassName("course-name")[0].innerHTML;
+    var course_title = course_code_full + "<br>" + course_name;
+    document.getElementById("explain-topp").innerHTML = course_title;
+    //the description
+    var description_hidden = source.getElementsByClassName("course-description")[0].innerHTML;
+    document.getElementById("explain-desc").innerHTML = description_hidden;
+    //and the prerequsite list
+    var prereq_div = document.getElementById("explain-prereq-list-div");
+    var prereq_ul = document.getElementById("explain-prereq-list");
+    var prereqs = source.getAttribute("prereq");
+    if (prereqs === "") {
+        prereq_div.style.display = "none"; //hide it if there is no prerequsite
+    } else {
+        prereq_div.style.display = "block";
+        prereq_ul.innerHTML = "";
+        var prereqs_split = prereqs.split(" ");
+        for (var i=0; i<prereqs_split.length; i++) {
+            prereq_ul.innerHTML += "<li>" + prereqs_split[i] + "</li>";
+        }
+    }
+}
+
+//unfocus any box when the background is clicked
+function unfocusBox() {
+    box_focused = false;
+    showAllElements();
+
+    //hide the description div
+    document.getElementById("explain-main").style.display = "none";
+    document.getElementById("explain-hint").style.display = "block";
+}
+
+//whenever root div is clicked (so includes when boxes are clicked)
+function rootDivClicked(event) {
+    //we just make sure it's only the background and not the boxes
+    var source = event.target || event.srcElement;
+    if (!source.classList.contains("classBox") && !source.classList.contains("course-code-full") && !source.classList.contains("course-name")) {
+        unfocusBox();
+    }
+}
+
 document.addEventListener("DOMContentLoaded", setup);
+

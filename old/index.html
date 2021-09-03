@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <title>York University CS classes</title>
+        <link rel="stylesheet" href="maine.css">
+        <script src="maine.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H7GNRNGX6D"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-H7GNRNGX6D');
+        </script>
+    </head>
+    <body>
+        <h1 class="titl">York University Computer Science Skill Tree (Course prerequisite list) <span class="smol">(under construction)</span></h1>
+        
+        <div hidden="hidden" id="templates">
+            <!-- hidden template element for the SVG line arrow element -->
+            <line x1="" y1="" x2="" y2="" style="stroke:rgb(0,0,0);stroke-width:1;" marker-end="url(#arrow)" class="svg-arrow"/>
+        </div>
+        
+        <div id="root">
+        <svg height="60em" width="84em" class="svgConns">
+            <defs>
+                <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" markerUnits="strokeWidth" orient="auto">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#000" />
+                </marker>
+            </defs>
+            <!-- SVG arrows are generated with js code and inserted here -->
+        </svg>
+        
+        <!-- first year courses -->
+        <div class="classBox eecs" id="eecs1001" style="left: 30em; top: 4em;">
+            EECS 1001 (1.00)<br>
+            Research Directions in Computing
+            <div class="course-description" hidden="hidden">An introduction to research directions within the department and more broadly within the field. Students will attend lectures and other events organised by the department. Note: This course is expected to be completed in the first-year of study.</div>
+        </div>
+        <div class="classBox eecs" id="eecs1012" style="left: 2em; top: 4em;">
+            EECS 1012 (3.00)<br>
+            Net-centric Introduction to Computing
+            <div class="course-description" hidden="hidden">The objectives of 1012 are threefold: providing a first exposure to event-driven programming, teaching students a set of computing skills (including reasoning about algorithms, tracing programs, test-driven development, unit testing), and providing an introduction to computing within a mobile, net-centric context. It uses problem-based approach to expose the underlying concepts and an experiential laboratory to implement them. A mature mobile software infrastructure (such as HTML, CSS, and JavaScript) is used so that students can pick up key programming concepts (such as variables and control flow) within a client-server context without being bogged down in complex or abstract constructs. Laboratory exercises expose students to a range of real-world problems with a view of motivating computational thinking and grounding the material covered in lecture.</div>
+        </div>
+        <div class="classBox eecs" id="eecs1015" style="left: 16em; top: 4em;" prereq="">
+            EECS 1015 (3.00)<br>
+            Introduction to Computer Science and Programming
+            <div class="course-description" hidden="hidden">This course is an introduction to the concepts and tools of computer science as students learn a procedural subset of the Python programming language. Python has a variety of libraries in different domains allowing for the solution of interesting problems which has made it a popular language in industry and the academy. Students do hands-on work to design, write, debug and test computer programs that solve problems computationally. Students study variables, assignments, expressions (arithmetic, relational and logical) and sequencing of statements to implement solutions for computational problems, in Python. They document programs with comments and preconditions. They analyze the type correctness of programs via a type checker. They use an Integrated Development Environment (IDE) to develop, unit-test and debug programs given a problem specification. They apply conditionals (including nested conditionals) to implement algorithms to solve computational problems. They code functions to develop modular programming solutions for computational problems. They apply Python loops (including nested loops) to implement algorithms to solve computational problems. They apply data structures, including tuples, sets, lists and dictionaries, to implement algorithms to solve computational problems. They code simple recursive functions to implement algorithms to solve computational problems. </div>
+        </div>
+        
+        <div class="classBox eecs" id="eecs1022" style="left: 2em; top: 10em;" prereq="eecs1012 eecs1015">
+            EECS 1022 (3.00)<br>
+            Programming for Mobile Computing
+            <div class="course-description" hidden="hidden">Provides a first exposure to object-oriented programming and enhances student understanding of key computing skills such as reasoning about algorithms, designing user interfaces, and working with software tools. It uses problem-based approach to expose the underlying concepts and an experiential laboratory to implement them. A mature mobile software infrastructure (such as Java and the Android programming environment) is used to expose and provide context to the underlying ideas. Laboratory exercises expose students to a range of real-world problems with a view of motivating computational thinking and grounding the material covered in lectures.</div>
+        </div>
+        
+        <div class="classBox math" id="math1300" style="left: 58em; top: 4em;">
+            MATH 1300 (3.00)<br>
+            Differential Calculus with Applications
+            <div class="course-description" hidden="hidden">Limits, derivatives with applications, antiderivatives, fundamental theorem of calculus, beginnings of integral calculus. </div>
+        </div>
+        <div class="classBox math" id="math1310" style="left: 58em; top: 10em;" prereq="math1300">
+            MATH 1310 (3.00)<br>
+            Integral Calculus with Applications
+            <div class="course-description" hidden="hidden">Transcendental functions, differential equations, techniques of integration, improper integrals, infinite series. </div>
+        </div>
+        <div class="classBox math" id="math1019" style="left: 44em; top: 4em;">
+            MATH 1019 (3.00)<br>
+            Discrete Mathematics for Computer Science
+            <div class="course-description" hidden="hidden">Introduction to abstraction. Use and development of precise formulations of mathematical ideas. Informal introduction to logic; introduction to naïve set theory; induction; relations and functions; big O-notation; recursive definitions, recurrence relations and their solutions; graphs and trees. </div>
+        </div>
+        <div class="classBox math" id="math1025" style="left: 72em; top: 4em;">
+            MATH 1025 (3.00)<br>
+            Applied Linear Algebra
+        </div>
+        
+        <!-- second year courses -->
+        <div class="classBox eecs" id="eecs2001" style="left: 44em; top: 16em;" prereq="eecs1022 math1019">
+            EECS 2001 (3.00)<br>
+            Introduction to the Theory of Computation
+        </div>
+        <div class="classBox eecs" id="eecs2011" style="left: 30em; top: 22em;" prereq="eecs2030 math1019">
+            EECS 2011 (3.00)<br>
+            Fundamentals of Data Structures
+        </div>
+        <div class="classBox eecs" id="eecs2021" style="left: 16em; top: 16em;" prereq="eecs1022">
+            EECS 2021 (4.00)<br>
+            Computer Organization
+        </div>
+        <div class="classBox eecs" id="eecs2030" style="left: 30em; top: 16em;" prereq="eecs1022">
+            EECS 2030 (3.00)<br>
+            Advanced Object Oriented Programming
+        </div>
+        <div class="classBox eecs" id="eecs2031" style="left: 2em; top: 16em;" prereq="eecs1022">
+            EECS 2031 (3.00)<br>
+            Software Tools
+        </div>
+        
+        <div class="classBox math" id="math1090" style="left: 44em; top: 22em;" prereq="math1019">
+            MATH 1090 (3.00)<br>
+            Introduction to Logic for Computer Science
+            <!-- math 1019 -->
+        </div>
+        <div class="classBox math" id="math2015" style="left: 58em; top: 16em;" prereq="math1310">
+            MATH 2015 (3.00)<br>
+            Applied Multivariate and Vector Calculus
+        </div>
+        <div class="classBox math" id="math2271" style="left: 72em; top: 22em;" prereq="math1025 math2015">
+            MATH 2271 (3.00)<br>
+            Differential Equations for Scientists and Engineers
+        </div>
+        <div class="classBox math" id="math2030" style="left: 58em; top: 22em;" prereq="math1310">
+            MATH 2030 (3.00)<br>
+            Elementary Probability
+        </div>
+        
+        <!-- third year courses -->
+        <div class="classBox eecs" id="eecs3000" style="left: 2em; top: 28em;" prereq="eecs2030">
+            EECS 3000 (3.00)<br>
+            Professional Practice in Computing
+            <!-- prereq: eecs 2030 -->
+        </div>
+        <div class="classBox eecs" id="eecs3101" style="left: 16em; top: 28em;" prereq="eecs2011 math1090 math1310">
+            EECS 3101 (3.00)<br>
+            Design and Analysis of Algorithms
+            <!-- prereq: eecs 2030, 2011, math 1310 -->
+        </div>
+        <div class="classBox eecs" id="eecs3311" style="left: 30em; top: 28em;" prereq="eecs2030 eecs2011 eecs2031">
+            EECS 3311 (3.00)<br>
+            Software Design
+            <!-- prereq: eecs 2030, 2011, math 1090 -->
+        </div>
+        <div class="classBox eecs" id="eecs3215" style="left: 2em; top: 34em;" prereq="eecs2031">
+            EECS 3215 (4.00)<br>
+            Embedded Systems
+            <!-- prereq: eecs 2030, 2031, 3201 -->
+        </div>
+        <div class="classBox eecs" id="eecs3221" style="left: 16em; top: 34em;" prereq="eecs2030 eecs2021 eecs2031 math1090">
+            EECS 3221 (3.00)<br>
+            Operating System Fundamentals
+            <!-- prereq: eecs 2030, 2021, 2031 -->
+        </div>
+        <div class="classBox eecs" id="eecs3401" style="left: 30em; top: 34em;" prereq="eecs2030 eecs2011 math1090">
+            EECS 3401 (3.00)<br>
+            Introduction to Artificial Intelligence and Logic Programming
+            <!-- prereq: eecs 2011, math 1090 -->
+        </div>
+        <div class="classBox eecs" id="eecs3421" style="left: 44em; top: 34em;" prereq="eecs2030">
+            EECS 3421 (3.00)<br>
+            Introduction to Database Systems
+            <!-- prereq: eecs 2030 -->
+        </div>
+        <div class="classBox eecs" id="eecs3431" style="left: 58em; top: 34em;" prereq="eecs2030 math1025">
+            EECS 3431 (3.00)<br>
+            Introduction to 3D Computer Graphics
+            <!-- prereq: eecs 2030, math 1025 -->
+        </div>
+        <div class="classBox eecs" id="eecs3461" style="left: 72em; top: 34em;" prereq="eecs2030">
+            EECS 3461 (3.00)<br>
+            User Interfaces
+            <!-- prereq: eecs 2030 -->
+        </div>
+            
+        <!-- fourth year courses -->
+    
+        <div class="classBox eecs" id="eecs4101" style="left: 2em; top: 40em;" prereq="eecs2030 eecs2001 eecs3101">
+            EECS 4101 (3.00)<br>
+            Advanced Data Structures
+            <!-- prereq: eecs 2030, 2001, 3101 -->
+        </div>
+        <div class="classBox eecs" id="eecs4115" style="left: 16em; top: 40em;" prereq="eecs2030 eecs2001 eecs3101">
+            EECS 4115 (3.00)<br>
+            Computational Complexity
+            <!-- prereq: eecs 2030, 2001, 3101 -->
+        </div>
+        <div class="classBox eecs" id="eecs4141" style="left: 30em; top: 40em;" prereq="eecs2021 eecs3101 math1025">
+            EECS 4141 (3.00)<br>
+            Introduction to Quantum Computing
+            <!-- prereq: eecs 2021, 3101, math 1025 -->
+        </div>
+        <div class="classBox eecs" id="eecs4161" style="left: 44em; top: 40em;" prereq="eecs3101">
+            EECS 4161 (3.00)<br>
+            Mathematics of Cryptography
+            <!-- prereq: eecs 3101 -->
+        </div>
+        <div class="classBox eecs" id="eecs4201" style="left: 58em; top: 40em;" prereq="eecs3201 eecs3221">
+            EECS 4201 (3.00)<br>
+            Computer Architecture
+            <!-- prereq: eecs 3201, 3221 -->
+        </div>
+        <div class="classBox eecs" id="eecs4215" style="left: 2em; top: 46em;" prereq="eecs2030 eecs3213">
+            EECS 4215 (3.00)<br>
+            Mobile Communications
+            <!-- prereq: eecs 2030, 3213 -->
+        </div>
+        <div class="classBox eecs" id="eecs4401" style="left: 16em; top: 46em;" prereq="eecs2030 eecs3401">
+            EECS 4401 (3.00)<br>
+            Artificial Intelligence
+            <!-- prereq: eecs 2030, 3401 -->
+        </div>
+        <div class="classBox eecs" id="eecs4404" style="left: 30em; top: 46em;" prereq="eecs2030 math2030">
+            EECS 4404 (3.00)<br>
+            Introduction to Machine Learning and Pattern Recognition
+            <!-- prereq: eecs 2030, math 2030 -->
+        </div>
+        <div class="classBox eecs" id="eecs4412" style="left: 44em; top: 46em;" prereq="eecs2030 eecs3101 eecs3421 math2030">
+            EECS 4412 (3.00)<br>
+            Data Mining
+            <!-- prereq: eecs 2030, 3101, 3421, math 2030 -->
+        </div>
+        <div class="classBox eecs" id="eecs4413" style="left: 58em; top: 46em;" prereq="eecs2030">
+            EECS 4413 (3.00)<br>
+            Building E-Commerce Systems
+            <!-- prereq: eecs 2030 -->
+        </div>
+        <div class="classBox eecs" id="eecs4414" style="left: 2em; top: 52em;" prereq="eecs3101 eecs3421 math2030">
+            EECS 4414 (3.00)<br>
+            Information Networks
+            <!-- prereq: eecs 3101, 3421, math 2030 -->
+        </div>
+        <div class="classBox eecs" id="eecs4415" style="left: 16em; top: 52em;" prereq="eecs3101 eecs3421">
+            EECS 4415 (3.00)<br>
+            Big Data Systems
+            <!-- prereq: eecs 3101, 3421 -->
+        </div>
+        <div class="classBox eecs" id="eecs4422" style="left: 30em; top: 52em;" prereq="eecs2031 math1025 math1310">
+            EECS 4422 (3.00)<br>
+            Computer Vision
+            <!-- prereq: eecs 2031, math 1025, 1310 -->
+        </div>
+        <div class="classBox eecs" id="eecs4441" style="left: 44em; top: 52em;" prereq="eecs2030 eecs3461">
+            EECS 4441 (3.00)<br>
+            Human-Computer Interaction
+            <!-- prereq: eecs 2030, 3461 -->
+        </div>
+        <div class="classBox eecs" id="eecs4443" style="left: 58em; top: 52em;" prereq="eecs2030 eecs3461">
+            EECS 4443 (3.00)<br>
+            Mobile User Interfaces
+            <!-- prereq: eecs 2030, 3461 -->
+        </div>
+        <div class="classBox eecs" id="eecs4471" style="left: 72em; top: 52em;" prereq="eecs3431 math1025 math1310">
+            EECS 4471 (3.00)<br>
+            Introduction to Virtual Reality
+            <!-- prereq: eecs 3431, math 1025, 1310 -->
+        </div>
+        </div>
+        
+        <div class="madeby">Made by PresidentKevvol (2019-2021)</div>
+    </body>
+</html>

@@ -1,0 +1,316 @@
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
+.titl
+{
+    padding-top: 0;
+    margin-top: 0.7rem;
+    font-size: 1.9em;
+    font-family: sans-serif;
+    position: absolute;
+    font-weight: normal;
+    left: 8rem;
+}
+
+#root
+{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.smol
+{
+    font-size: 0.45em;
+}
+
+.madeby
+{
+    position: absolute;
+    right: 0;
+    top: 60em;
+    margin: 0;
+    padding: 0;
+}
+
+.svgConns
+{
+    position: absolute;
+}
+
+.classBox
+{
+    width: 12em;
+    height: 4.5em;
+    font-family: sans-serif;
+    text-align: center;
+    border-radius: 12px;
+    position: absolute;
+}
+
+.eecs
+{
+    border-style: solid;
+    border-color: #c675ff;
+    border-width: 2px;
+    background-color: #e7c4ff;
+}
+
+.math
+{
+    border-style: solid;
+    border-color: #23c4ff;
+    border-width: 2px;
+    background-color: #b2f2ff;
+}
+
+#eecs1001{
+    left: 16em;
+    top: 4em;
+}
+
+#eecs1012
+{
+    left: 2em;
+    top: 4em;
+}
+
+#eecs1022
+{
+    left: 2em;
+    top: 10em;
+}
+
+
+#math1300
+{
+    left: 58em;
+    top: 4em;
+}
+
+#math1310
+{
+    left: 58em;
+    top: 10em;
+}
+
+#math1019
+{
+    left: 30em;
+    top: 4em;
+}
+
+#math1025
+{
+    left: 72em;
+    top: 4em;
+}
+
+
+#eecs2031
+{
+    left: 2em;
+    top: 16em;
+}
+
+#eecs2021
+{
+    left: 16em;
+    top: 16em;
+}
+
+#eecs2030
+{
+    left: 30em;
+    top: 16em;
+}
+
+#eecs2001
+{
+    left: 44em;
+    top: 16em;
+}
+
+#eecs2011
+{
+    left: 30em;
+    top: 22em;
+}
+
+#math1090
+{
+    left: 44em;
+    top: 22em;
+}
+
+#math2015
+{
+    left: 58em;
+    top: 16em;
+}
+
+#math2271
+{
+    left: 72em;
+    top: 22em;
+}
+
+#math2030
+{
+    left: 58em;
+    top: 22em;
+}
+
+
+#eecs3000
+{
+    left: 2em;
+    top: 28em;
+}
+
+#eecs3101
+{
+    left: 16em;
+    top: 28em;
+}
+
+#eecs3311
+{
+    left: 30em;
+    top: 28em;
+}
+
+#eecs3215
+{
+    left: 2em;
+    top: 34em;
+}
+
+#eecs3221
+{
+    left: 16em;
+    top: 34em;
+}
+
+#eecs3401
+{
+    left: 30em;
+    top: 34em;
+}
+
+#eecs3421
+{
+    left: 44em;
+    top: 34em;
+}
+
+#eecs3431
+{
+    left: 58em;
+    top: 34em;
+}
+
+#eecs3461
+{
+    left: 72em;
+    top: 34em;
+}
+
+#eecs4101
+{
+    left: 2em;
+    top: 40em;
+}
+
+#eecs4115
+{
+    left: 16em;
+    top: 40em;
+}
+
+#eecs4141
+{
+    left: 30em;
+    top: 40em;
+}
+
+#eecs4161
+{
+    left: 44em;
+    top: 40em;
+}
+
+#eecs4201
+{
+    left: 58em;
+    top: 40em;
+}
+
+#eecs4215
+{
+    left: 2em;
+    top: 46em;
+}
+
+#eecs4401
+{
+    left: 16em;
+    top: 46em;
+}
+
+#eecs4404
+{
+    left: 30em;
+    top: 46em;
+}
+
+#eecs4412
+{
+    left: 44em;
+    top: 46em;
+}
+
+#eecs4413
+{
+    left: 58em;
+    top: 46em;
+}
+
+#eecs4414
+{
+    left: 2em;
+    top: 52em;
+}
+
+#eecs4415
+{
+    left: 16em;
+    top: 52em;
+}
+
+#eecs4422
+{
+    left: 30em;
+    top: 52em;
+}
+
+#eecs4441
+{
+    left: 44em;
+    top: 52em;
+}
+
+#eecs4443
+{
+    left: 58em;
+    top: 52em;
+}
+
+#eecs4471
+{
+    left: 72em;
+    top: 52em;
+}
