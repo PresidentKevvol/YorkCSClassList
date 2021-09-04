@@ -19,9 +19,7 @@ div#root
 {
     padding: 0;
     margin: 0;
-    height: 120em;
-    width: calc(72em + 12em + 2em);
-    padding-right: calc(30vw + 2em);
+    padding-right: calc(24vw + 2em);
     position: relative;
 }
 
@@ -74,13 +72,13 @@ div#explain {
     position: fixed;
     right: 0;
     bottom: 0;
-    width: 30vw;
-    height: 80vh;
+    width: 24vw;
+    height: 50vh;
     border: 2px solid #572900;
     background-color: #ffc694;
 
     font-family: sans-serif;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 div#explain-topp {
