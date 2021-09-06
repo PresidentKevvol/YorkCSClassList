@@ -52,22 +52,53 @@ div#root
     position: absolute;
 }
 
-.eecs
+/* the two styles of color coding for the boxes */
+/* by department */
+div#root[colorcode="dept"] .eecs
 {
     border-style: solid;
     border-color: #c675ff;
     border-width: 2px;
     background-color: #e7c4ff;
 }
-
-.math
+div#root[colorcode="dept"] .math
 {
     border-style: solid;
     border-color: #23c4ff;
     border-width: 2px;
     background-color: #b2f2ff;
 }
+/* by level */
+div#root[colorcode="level"] .yl-1
+{
+    border-style: solid;
+    border-color: #b5b54e;
+    border-width: 2px;
+    background-color: #ffffb5;
+}
+div#root[colorcode="level"] .yl-2
+{
+    border-style: solid;
+    border-color: #4ca300;
+    border-width: 2px;
+    background-color: #caff9c;
+}
+div#root[colorcode="level"] .yl-3
+{
+    border-style: solid;
+    border-color: #3f7096;
+    border-width: 2px;
+    background-color: #c2e4ff;
+}
+div#root[colorcode="level"] .yl-4
+{
+    border-style: solid;
+    border-color: #6955a1;
+    border-width: 2px;
+    background-color: #d0bfff;
+}
 
+/* the explaination (description) section */
 div#explain {
     position: fixed;
     right: 0;
@@ -99,4 +130,30 @@ div#explain-hint {
     top: 30%;
     width: 100%;
     color: #756659;
+}
+
+/* the top right settings section */ 
+div#settings-bar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: right;
+    padding: 1em;
+}
+
+button#switch-color-code {
+    border: 2px solid black;
+    border-radius: 6px;
+    
+    font-size: 1.3em;
+    background-color: white;
+    color: black;
+}
+button#switch-color-code:hover {
+    background-color: black;
+    color: white;
+}
+button#switch-color-code:active {
+    background-color: #555;
+    border-color: #555;
 }

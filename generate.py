@@ -11,7 +11,7 @@ import json # for reading json
 # so for now we need only worry about the placement of each 'box' representing a course
 div_template = \
 """
-<div class="classBox {dept}" id="{dept}{code}" style="left: {x}em; top: {y}em;" prereq="{prereqs}">
+<div class="classBox {dept} {year_level}" id="{dept}{code}" style="left: {x}em; top: {y}em;" prereq="{prereqs}">
     <span class="course-code-full">{dept_upper} {code} ({credit:.2f})</span><br>
     <span class="course-name" style="font-size:{name_font_size};">{name}</span>
     <div class="course-description" hidden="hidden">{full_description}</div>
@@ -34,9 +34,12 @@ class Course:
         prereqs = " ".join([(i[0] + i[1]) for i in self.prereqs])
         # font size of the course name (we need to shrink it if too long)
         name_font_size = "0.9em" if len(self.name) > 60 else "1.0em"
+        # the year level of the course
+        year_level = "yl-" + self.code[0]
         # returning a formatted html text of div element
         return div_template.format(
             dept = self.dept,
+            year_level = year_level,
             code = self.code,
             x = x,
             y = y,

@@ -13,7 +13,7 @@
             <line x1="" y1="" x2="" y2="" style="stroke:rgb(0,0,0);stroke-width:1;" marker-end="url(#arrow)" class="svg-arrow"/>
         </div>
 
-        <div id="root" style="width: {{- root_div_base_width -}}; height: {{- root_div_base_height -}};">
+        <div id="root" style="width: {{- root_div_base_width -}}; height: {{- root_div_base_height -}};" colorcode="dept">
             <svg height="100%" width="100%" class="svgConns">
                 <defs>
                     <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" markerUnits="strokeWidth" orient="auto">
@@ -44,7 +44,11 @@
             </div>
             <div id="explain-hint">Click on a course to see its description here</div>
         </div>
-
+        
+        <div id="settings-bar">
+            <button id="switch-color-code">Color code by year</button>
+        </div>
+        
         <div class="madeby">Made by PresidentKevvol (2019-2021)</div>
     </body>
 </html>

@@ -16,6 +16,9 @@ function setup()
     rootDiv.addEventListener("click", rootDivClicked);
 
     setupArrows();
+    
+    //add the toggle color mode button's event listener
+    document.getElementById("switch-color-code").addEventListener("click", toggle_color_code_clicked);
 }
 
 //function for setting up (procedurally generating) all the arrows
@@ -205,6 +208,18 @@ function rootDivClicked(event) {
     var source = event.target || event.srcElement;
     if (!source.classList.contains("classBox") && !source.classList.contains("course-code-full") && !source.classList.contains("course-name")) {
         unfocusBox();
+    }
+}
+
+//when the button for toggling color code format for the boxes
+function toggle_color_code_clicked(event) {
+    var targ = event.target;
+    if (targ.innerHTML === "Color code by year") {
+        rootDiv.setAttribute("colorcode", "level");
+        targ.innerHTML = "Color code by dept";
+    } else if (targ.innerHTML === "Color code by dept") {
+        rootDiv.setAttribute("colorcode", "dept");
+        targ.innerHTML = "Color code by year";
     }
 }
 
