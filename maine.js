@@ -19,6 +19,9 @@ function setup()
     
     //add the toggle color mode button's event listener
     document.getElementById("switch-color-code").addEventListener("click", toggle_color_code_clicked);
+    //add the zoom size slider's event listener
+    document.getElementById("zoom-range-slider").addEventListener("input", zoom_slider_update);
+    document.getElementById("zoom-range-slider").addEventListener("change", zoom_slider_update);
 }
 
 //function for setting up (procedurally generating) all the arrows
@@ -221,6 +224,16 @@ function toggle_color_code_clicked(event) {
         rootDiv.setAttribute("colorcode", "dept");
         targ.innerHTML = "Color code by year";
     }
+}
+
+//when the slider for zooming is changed
+function zoom_slider_update(event) {
+    //get the value of the slider bar
+    var zoom_value = event.target.value;
+    //update the text
+    document.getElementById("zoom-value").innerHTML = zoom_value;
+    //and update the inline css of the root div
+    rootDiv.style.fontSize = (zoom_value + "em");
 }
 
 document.addEventListener("DOMContentLoaded", setup);

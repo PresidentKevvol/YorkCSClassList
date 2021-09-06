@@ -48,7 +48,7 @@ div#root
     height: 4.5em;
     font-family: sans-serif;
     text-align: center;
-    border-radius: 12px;
+    border-radius: 0.6em;
     position: absolute;
 }
 
@@ -139,8 +139,10 @@ div#settings-bar {
     top: 0;
     text-align: right;
     padding: 1em;
+    
+    font-family: sans-serif;
 }
-
+/* the button to switch between color code */
 button#switch-color-code {
     border: 2px solid black;
     border-radius: 6px;
@@ -156,4 +158,13 @@ button#switch-color-code:hover {
 button#switch-color-code:active {
     background-color: #555;
     border-color: #555;
+}
+/* the size/zoom slide bar */
+div#zoom-size-div {
+    font-size: 1.4em;
+    padding-top: 0.6em;
+    text-align: left;
+}
+#zoom-range-slider {
+    width: 14em;
 }
