@@ -123,6 +123,14 @@
 },
 {
   "dept":"math",
+  "code":"2030",
+  "credit":3.0,
+  "name":"Elementary Probability",
+  "prereq":"math1310",
+  "desc":"Introduction to the theory of probability as preparation for further study in either mathematical or applied probability and statistics. Topics include probability spaces, conditional probability, independence, random variables, distribution functions, expectation, Chebyshev's inequality, common distributions, moment-generating functions and limit theorems. "
+},
+{
+  "dept":"math",
   "code":"2271",
   "credit":3.0,
   "name":"Differential Equations for Scientists and Engineers",
