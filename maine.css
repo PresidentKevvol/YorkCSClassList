@@ -30,10 +30,11 @@ div#root {
 
 .madeby {
     position: relative;
-    left: 0;
-    bottom: 0;
+    left: 32;
+    bottom: 16;
     margin: 0;
     padding: 0;
+    color:rgb(150, 150, 150)
 }
 
 .svgConns {
@@ -47,7 +48,7 @@ div#root {
     border-radius: 0.5em;
     position: absolute;
     box-shadow: 0 10px 16px 3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
-    padding: 0.5rem;
+    padding: 0.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
