@@ -1,35 +1,34 @@
-body
-{
+body {
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    background: rgb(240, 247, 253);
 }
 
-.titl
-{
+.titl {
     padding-top: 0;
     margin-top: 1.5rem;
-    font-size: 2.3em;
-    font-family: sans-serif;
+    font-size: 2em;
     position: relative;
     font-weight: normal;
     left: 8rem;
+    color: rgb(255, 255, 255);
 }
 
-div#root
-{
+div#root {
     padding: 0;
     margin: 0;
     padding-right: calc(24vw + 2em);
     position: relative;
 }
 
-.smol
-{
+.smol {
     font-size: 0.45em;
+    color: rgb(218, 218, 218);
 }
 
-.madeby
-{
+.madeby {
     position: relative;
     left: 0;
     bottom: 0;
@@ -37,134 +36,187 @@ div#root
     padding: 0;
 }
 
-.svgConns
-{
+.svgConns {
     position: absolute;
 }
 
-.classBox
-{
+.classBox {
     width: 12em;
-    height: 4.5em;
-    font-family: sans-serif;
+    height: 5em;
     text-align: center;
-    border-radius: 0.6em;
+    border-radius: 0.5em;
     position: absolute;
+    box-shadow: 0 10px 16px 3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms ease;
 }
 
 /* the two styles of color coding for the boxes */
+
 /* by department */
-div#root[colorcode="dept"] .eecs
-{
-    border-style: solid;
-    border-color: #c675ff;
-    border-width: 2px;
-    background-color: #e7c4ff;
+
+div#root[colorcode="dept"] .eecs {
+    /*border-color: #ffffff;*/
+    border: 2px solid #7f00d4;
+    background-color: #f1dbff;
 }
-div#root[colorcode="dept"] .math
-{
-    border-style: solid;
-    border-color: #23c4ff;
-    border-width: 2px;
-    background-color: #b2f2ff;
+
+div#root[colorcode="dept"] .math {
+    border: 2px solid #00a2c2;
+    background-color: #dcf9ff;
 }
+
 /* by level */
-div#root[colorcode="level"] .yl-1
-{
+
+div#root[colorcode="level"] .yl-1 {
     border-style: solid;
-    border-color: #b5b54e;
+    border-color: #d6d603;
     border-width: 2px;
-    background-color: #ffffb5;
+    background-color: #ffffce;
 }
-div#root[colorcode="level"] .yl-2
-{
+
+div#root[colorcode="level"] .yl-2 {
     border-style: solid;
-    border-color: #4ca300;
+    border-color: #417e0c;
     border-width: 2px;
-    background-color: #caff9c;
+    background-color: #e2ffc8;
 }
-div#root[colorcode="level"] .yl-3
-{
+
+div#root[colorcode="level"] .yl-3 {
     border-style: solid;
-    border-color: #3f7096;
+    border-color: #1f5781;
     border-width: 2px;
-    background-color: #c2e4ff;
+    background-color: #e2f2ff;
 }
-div#root[colorcode="level"] .yl-4
-{
+
+div#root[colorcode="level"] .yl-4 {
     border-style: solid;
-    border-color: #6955a1;
+    border-color: #7852e9;
     border-width: 2px;
-    background-color: #d0bfff;
+    background-color: #f1ebff;
 }
 
 /* the explaination (description) section */
+
 div#explain {
     position: fixed;
     right: 0;
     bottom: 0;
-    width: 24vw;
+    width: 21.5vw;
     height: 50vh;
-    border: 2px solid #572900;
-    background-color: #ffc694;
-
-    font-family: sans-serif;
+    border: 1px solid #c4c4c4;
+    background-color: rgb(39, 45, 51);
+    border-radius: 0.5em;
+    margin-right: 32px;
+    margin-bottom: 32px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
     overflow-y: scroll;
+    box-shadow: 0 10px 16px 3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
 }
 
 div#explain-topp {
     padding: 0.6em 0;
     font-size: 1.15em;
     text-align: center;
-}
-div#explain-desc {
-    padding: 0.4em 1em;
-}
-div#explain-prereq-list-div {
-    padding: 0.4em 1em;
-}
-div#explain-hint {
-    position: absolute;
-    text-align: center;
-    font-size: 1.6em;
-    top: 30%;
-    width: 100%;
-    color: #756659;
+    font-weight: 900;
+    color: white;
 }
 
-/* the top right settings section */ 
+div#explain-desc {
+    padding: 0.4em 1em;
+    color: rgb(218, 218, 218);
+}
+
+div#explain-prereq-list-div {
+    padding: 0.4em 1em;
+   color: white;
+}
+
+div#explain-hint {
+    text-align: center;
+    font-size: 1.6em;
+    color: #ffffff;
+}
+
+/* the top right settings section */
+
 div#settings-bar {
     position: fixed;
     right: 0;
     top: 0;
     text-align: right;
-    padding: 1em;
-    
+    padding: 1rem;
     font-family: sans-serif;
+    display: block ruby;
+    margin-top: 6px;
+    margin-right: 32px;
 }
+
 /* the button to switch between color code */
+
 button#switch-color-code {
-    border: 2px solid black;
-    border-radius: 6px;
-    
-    font-size: 1.3em;
-    background-color: white;
-    color: black;
-}
-button#switch-color-code:hover {
-    background-color: black;
+    font-size: 1.2em;
+    background-color: rgb(39, 45, 51);
     color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5em;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 24px;
+    transition: all 750ms ease-out;
+    border: none;
+    cursor: pointer;
 }
+
+button#switch-color-code:hover {
+    background-color: rgb(181, 200, 219);
+    color: rgb(34, 34, 34);
+}
+
 button#switch-color-code:active {
     background-color: #555;
     border-color: #555;
 }
+
 /* the size/zoom slide bar */
+
 div#zoom-size-div {
-    font-size: 1.4em;
-    padding-top: 0.6em;
+    font-size: 1.2em;
     text-align: left;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding: 1.1rem 2rem;
+    /* border: 2px solid white; */
+    border-radius: 0.5em;
+    background: rgb(39, 45, 51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 #zoom-range-slider {
     width: 14em;
+    margin-left: 16px;
+}
+
+.course-code-full {
+    font-weight: 900;
+}
+
+.wide-bg-colour{
+    text-align: left;
+    background-color: rgb(59, 70, 78);
+    display: block;
+    padding: 4px;
+    margin-bottom: 56px;
+}
+
+#zoom-value{
+    margin-left: 12px;
 }
