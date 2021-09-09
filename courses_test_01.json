@@ -70,7 +70,7 @@
   "code":"2001",
   "credit":3.0,
   "name":"Introduction to the Theory of Computation",
-  "prereq":"eecs1022",
+  "prereq":"eecs1022 math1019",
   "desc":"Introduction to the theory of computing, including automata theory, formal languages and Turing machines; theoretical models and their applications in various fields of computer science. The emphasis is on practical applications of the theory and concepts rather than formal rigour. "
 },
 {
