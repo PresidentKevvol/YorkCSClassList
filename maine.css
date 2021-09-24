@@ -116,7 +116,6 @@ div#explain {
     padding: 1rem;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 3rem;
     overflow-y: scroll;
     box-shadow: 0 10px 16px 3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
@@ -144,6 +143,7 @@ div#explain-hint {
     text-align: center;
     font-size: 1.6em;
     color: #ffffff;
+    margin-top: 10rem;
 }
 
 /* the top right settings section */
@@ -155,7 +155,7 @@ div#settings-bar {
     text-align: right;
     padding: 1rem;
     font-family: sans-serif;
-    display: block ruby;
+    display: flex;
     margin-top: 6px;
     margin-right: 32px;
 }
