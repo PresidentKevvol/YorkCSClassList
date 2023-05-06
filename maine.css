@@ -34,7 +34,7 @@ div#root {
     bottom: 16;
     margin: 0;
     padding: 0;
-    color:rgb(150, 150, 150)
+    color:rgb(80, 80, 80)
 }
 
 .svgConns {
@@ -155,9 +155,10 @@ div#settings-bar {
     text-align: right;
     padding: 1rem;
     font-family: sans-serif;
-    display: block ruby;
+    display: flex;
+    flex-direction: column;
     margin-top: 6px;
-    margin-right: 32px;
+    margin-right: 16px;
 }
 
 /* the button to switch between color code */
@@ -199,6 +200,8 @@ div#zoom-size-div {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-top: 1em;
 }
 
 #zoom-range-slider {

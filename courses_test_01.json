@@ -75,11 +75,11 @@
 },
 {
   "dept":"eecs",
-  "code":"2011",
+  "code":"2101",
   "credit":3.0,
   "name":"Fundamentals of Data Structures",
   "prereq":"eecs2030 math1019",
-  "desc":"A study of fundamental data structures and their use in the efficient implementation of algorithms. Topics include abstract data types, lists, stacks, queues, trees and graphs. The course discusses the fundamental data structures commonly used in the design of algorithms. Abstract operations on data structures are specified using pre and post conditions and/or system invariants. Trade-offs between a number of different implementations of each abstract data types (ADT) are analyzed. Each algorithm operating on data structures is proved correct using loop invariants or induction. Both formal and informal proofs are introduced though most of the reasoning is done informally. Data structures are coded and unit tested in an object-oriented language. Selecting the appropriate ADT and a suitable implementation depending on the application is covered. "
+  "desc":"The course discusses the fundamental data structures commonly used in the design of algorithms. Abstract operations on data structures are specified using pre- and post-conditions and/or system invariants. Trade-offs between a number of different implementations of each abstract data types (ADT) are analyzed. Each algorithm operating on data structures is proved correct using loop invariants or induction. Both formal and informal proofs are introduced, but most of the reasoning is done informally. Data structures are coded and unit tested in an object oriented language. Selecting the appropriate ADT and a suitable implementation depending on the application is covered. "
 },
 {
   "dept":"eecs",
@@ -158,7 +158,7 @@
   "code":"3101",
   "credit":3.0,
   "name":"Design and Analysis of Algorithms",
-  "prereq":"eecs2011 math1090 math1310",
+  "prereq":"eecs2101 math1090 math1310",
   "desc":"Review of fundamental data structures. Analysis of algorithms: time and space complexity. Algorithm design paradigms: divide-and-conquer, exploring graphs, greedy methods, local search, dynamic programming, probabilistic algorithms, computational geometry. NP-complete problems. "
 },
 {
@@ -214,7 +214,7 @@
   "code":"3311",
   "credit":3.0,
   "name":"Software Design",
-  "prereq":"eecs2030 eecs2011 eecs2031 math1090",
+  "prereq":"eecs2030 eecs2101 eecs2031 math1090",
   "desc":"A study of design methods and their use in the correct implementation, maintenance and evolution of software systems. Topics include design, implementation, testing, documentation needs and standards, support tools. Students design and implement components of a software system. "
 },
 {
@@ -222,7 +222,7 @@
   "code":"3342",
   "credit":3.0,
   "name":"System Specification and Refinement",
-  "prereq":"eecs2030 eecs2011 math1090",
+  "prereq":"eecs2030 eecs2101 math1090",
   "desc":"Theory and tools for specifying computer systems (sequential, concurrent and embedded). Specification (via set theory and predicate logic), modelling, abstraction, refinement and formal reasoning are undertaken before code development so that systems are correct by construction under the stated assumptions. "
 },
 {
@@ -230,7 +230,7 @@
   "code":"3401",
   "credit":3.0,
   "name":"Introduction to Artificial Intelligence and Logic Programming",
-  "prereq":"eecs2030 eecs2011 math1090",
+  "prereq":"eecs2030 eecs2101 math1090",
   "desc":"Artificial Intelligence (AI) deals with how to build intelligent systems. In this course, we examine fundamental concepts in AI: knowledge representation and reasoning, search, constraint satisfaction, reasoning under uncertainty, etc. The course also introduces logic programming and Prolog. "
 },
 {
@@ -270,7 +270,7 @@
   "code":"3481",
   "credit":3.0,
   "name":"Applied Cryptography",
-  "prereq":"eecs2011",
+  "prereq":"eecs2101",
   "desc":"An overview of cryptographic algorithms and the main cryptosystems in use today, emphasizing the application of cryptographic algorithms to designing secure protocols."
 },
 {
@@ -392,7 +392,7 @@
   "code":"4411",
   "credit":3.0,
   "name":"Database Management Systems",
-  "prereq":"eecs2011 eecs2021 eecs2031 eecs3421",
+  "prereq":"eecs2101 eecs2021 eecs2031 eecs3421",
   "desc":"A study of principles of database management systems. A thorough analysis of theory of normal, relational algebra and calculus and query languages based on these concepts. Other topics: security and integrity issues, concurrency control, distributed systems, query optimization. "
 },
 {

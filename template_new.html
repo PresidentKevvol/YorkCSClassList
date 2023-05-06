@@ -4,6 +4,10 @@
         <meta charset="UTF-8">
         <title>York University CS classes</title>
         <link rel="stylesheet" href="maine.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Saira+Condensed:wght@300&display=swap"
+            rel="stylesheet">
         <script src="maine.js"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-H7GNRNGX6D"></script>
@@ -16,8 +20,9 @@
         </script>
     </head>
     <body>
-        <h1 class="titl">York University Computer Science Skill Tree (Course prerequisite list) <span class="smol">(under construction)</span></h1>
-
+      <div class="wide-bg-colour">
+          <h1 class="titl">York University Computer Science Skill Tree <br> (Course Prerequisite List) </h1>
+      </div>
         <div hidden="hidden" id="templates">
             <line x1="" y1="" x2="" y2="" style="stroke:rgb(0,0,0);stroke-width:1;" marker-end="url(#arrow)" class="svg-arrow"/>
         </div>
@@ -40,7 +45,7 @@
         <div id="explain">
             <div id="explain-main" style="display: none;">
                 <div id="explain-topp">
-                    EECS 2011 (3.00)<br>
+                    EECS 2101 (3.00)<br>
                       Fundamentals of Data Structures
                 </div>
                 <div id="explain-desc">
@@ -53,7 +58,7 @@
             </div>
             <div id="explain-hint">Click on a course to see its description here</div>
         </div>
-        
+
         <div id="settings-bar">
             <button id="switch-color-code">Color code by year</button>
             <div id="zoom-size-div">
@@ -61,7 +66,7 @@
                 <input type="range" id="zoom-range-slider" min="0.35" max="2.0" value="1.0" step="0.05">
             </div>
         </div>
-        
-        <div class="madeby">Made by <a href="https://github.com/PresidentKevvol">PresidentKevvol</a> (2019-2021)</div>
+
+        <div class="madeby">Made by <a href="https://github.com/PresidentKevvol">PresidentKevvol / DeepFriedPancake</a> (2019-2023)</div>
     </body>
 </html>
