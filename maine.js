@@ -22,6 +22,9 @@ function setup()
     //add the zoom size slider's event listener
     document.getElementById("zoom-range-slider").addEventListener("input", zoom_slider_update);
     document.getElementById("zoom-range-slider").addEventListener("change", zoom_slider_update);
+
+    //new version notification
+    document.getElementsByClassName("new-version")[0].getElementsByClassName("remove-cross")[0].addEventListener("click", close_notif);
 }
 
 //function for setting up (procedurally generating) all the arrows
@@ -234,6 +237,11 @@ function zoom_slider_update(event) {
     document.getElementById("zoom-value").innerHTML = zoom_value;
     //and update the inline css of the root div
     rootDiv.style.fontSize = (zoom_value + "em");
+}
+
+// closing the popup notif box
+function close_notif(event) {
+    event.target.parentElement.style.display = 'none';
 }
 
 document.addEventListener("DOMContentLoaded", setup);

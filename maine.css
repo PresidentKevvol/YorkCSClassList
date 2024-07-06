@@ -224,3 +224,29 @@ div#zoom-size-div {
 #zoom-value{
     margin-left: 12px;
 }
+
+.new-version {
+    position: fixed;
+    background-color: rgba(44, 40, 48, 0.95);
+    bottom: 4em;
+    left: 0em;
+    color: white;
+
+    padding: 1em;
+
+    
+}
+
+.new-version a {
+    color: yellow;
+}
+
+.new-version .remove-cross {
+    color: lightgray;
+    position: absolute;
+
+    top: 0;
+    right: 0.3em;
+
+    font-size: 1.6em;
+}
